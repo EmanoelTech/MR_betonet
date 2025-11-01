@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Marcos Roberto Betoneiras - As Betoneiras do Wilton</title>
+    <meta name="description" content="Vendemos betoneiras de qualidade, direto do aluguel do Wilton. Fundada pelo avô de Marcos Roberto.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .toast {
+            position: fixed;
+            bottom: -100px; /* Começa escondido em baixo */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50; /* Verde sucesso */
+            color: white;
+            padding: 16px 25px;
+            border-radius: 8px;
+            z-index: 1000;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            transition: bottom 0.5s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .toast.show {
+            bottom: 30px; /* Sobe para uma posição visível */
+        }
+        .toast.error {
+            background-color: #f44336; /* Vermelho erro */
+        }
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container nav-bar">
+            
+            <a href="#hero" class="logo">MR Betoneiras</a>
+            
+            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link">Nosso Esquema</a></li>
+                <li><a href="#frota" class="nav-link">Betoneiras</a></li>
+                <li><a href="#precos" class="nav-link">Vendas</a></li>
+                <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                
+                <li><a href="#contato" class="nav-link cta-button-nav">Apoiar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content container">
+                
+                <h1 class="fade-in">O ESQUEMA DAS BETONEIRAS</h1>
+                <p class="fade-in-delay">Vendemos betoneiras de qualidade. (Que alugamos do Wilton e depois passamos pra frente).</p>
+                <a href="#frota" class="cta-button">Ver Betoneiras</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="container section-padding fade-on-scroll" role="region" aria-labelledby="sobre-titulo">
+            
+            <h2 id="sobre-titulo" class="section-title">Sobre a Marcos Roberto Betoneiras</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>A Marcos Roberto Betoneiras não é uma vendedora qualquer. Somos pioneiros no repasse. Fundada em 1970 pelo avô do Marcos Roberto, nossa missão é pegar o equipamento do Wilton e vender para você com máxima performance.</p>
+                    <p>As betoneiras vêm direto do Wilton. Elas funcionam (na maioria das vezes) e ajudam a reduzir custos (para nós).</p>
+                </div>
+                <div class="sobre-imagem" aria-hidden="true">
+                    <i class="fas fa-cogs"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="section-padding section-dark fade-on-scroll" role="region" aria-labelledby="servicos-titulo">
+            <div class="container">
+                
+                <h2 id="servicos-titulo" class="section-title">Nosso Modelo de Negócio</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <i class="fas fa-satellite-dish card-icon" aria-hidden="true"></i>
+                        <h3 class="card-title">Logística com o Wilton</h3>
+                        <p>Buscamos a betoneira no Wilton assim que você paga. A gestão é direta com ele.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-tools card-icon" aria-hidden="true"></i>
+                        <h3 class="card-title">Manutenção... Talvez</h3>
+                        <p>Nossos equipamentos... bem, eles são usados. Garantimos que funcionam na hora da entrega.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shipping-fast card-icon" aria-hidden="true"></i>
+                        <h3 class="card-title">Entrega Rápida</h3>
+                        <p>Receba sua betoneira assim que o Wilton liberar para nós. Logística otimizada (depende ele).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="frota" class="container section-padding fade-on-scroll" role="region" aria-labelledby="frota-titulo">
+            
+            <h2 id="frota-titulo" class="section-title">Nossa Frota (Do Wilton)</h2>
+            <div class="grid-3">
+                <div class="card frota-card">
+                    <div class="card-image" style="background-image: url('https://i.imgur.com/2e9tmyr.png')"></div>
+                    <h3 class="card-title">Betoneira "A Clássica"</h3>
+                    <p>Capacidade: 400 Litros</p>
+                    <p>Ideal para pequenas e médias reformas. Compacta e (às vezes) silenciosa.</p>
+                </div>
+                <div class="card frota-card">
+                    <div class="card-image" style="background-image: url('https://i.imgur.com/djpHura.png')"></div>
+                    <h3 class="card-title">Betoneira "A Média"</h3>
+                    <p>Capacidade: 800 Litros</p>
+                    <p>Alto desempenho para obras comerciais. Mistura... programável?</p>
+                </div>
+                <div class="card frota-card">
+                    <div class="card-image" style="background-image: url('https://i.imgur.com/hTfeVUu.png')"></div>
+                    <h3 class="card-title">Betoneira "A Parruda"</h3>
+                    <p>Capacidade: 1500 Litros (Industrial)</p>
+                    <p>Para grandes projetos. Operação 100% manual (o autônomo quebrou).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="precos" class="section-padding section-dark fade-on-scroll" role="region" aria-labelledby="precos-titulo">
+            <div class="container">
+                
+                <h2 id="precos-titulo" class="section-title">Preços de Venda</h2>
+                <div class="grid-3">
+                    <div class="card price-card">
+                        <h3 class="price-title">Venda "Pequena"</h3>
+                        <div class="price-valor">R$ 950<span class="price-periodo"> (único)</span></div>
+                        <ul class="price-list">
+                            <li>Modelo "A Clássica"</li> 
+                            <li>Suporte técnico (via Wilton)</li>
+                            <li>Seguro básico</li>
+                        </ul>
+                        <a href="#contato" class="cta-button-outline">Comprar Agora</a>
+                    </div>
+                    <div class="card price-card popular">
+                        <span class="popular-badge">Mais Popular</span>
+                        <h3 class="price-title">Venda "Média"</h3>
+                        <div class="price-valor">R$ 1.500<span class="price-periodo"> (único)</span></div>
+                        <ul class="price-list">
+                            <li>Modelo "A Média"</li>
+                            <li>Suporte prioritário (Falar com Wilton)</li>
+                            <li>Seguro completo</li>
+                            <li>Painel de gestão (do Wilton)</li>
+                        </ul>
+                        <a href="#contato" class="cta-button">Comprar Agora</a>
+                    </div>
+                    <div class="card price-card">
+                        <h3 class="price-title">Venda "Parruda"</h3>
+                        <div class="price-valor">R$ 2.200<span class="price-periodo"> (único)</span></div>
+                        <ul class="price-list">
+                            <li>Modelo "A Parruda"</li>
+                            <li>Suporte dedicado (Boa sorte com o Wilton)</li>
+                            <li>Manutenção preditiva (você prevê que vai quebrar)</li>
+                        </ul>
+                        <a href="#contato" class="cta-button-outline">Comprar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="container section-padding fade-on-scroll" role="region" aria-labelledby="galeria-titulo">
+            <h2 id="galeria-titulo" class="section-title">Galeria</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item"><img src="https://i.imgur.com/Usrdr9M.jpeg" alt="Betoneira em operação na Obra A"></div>
+                <div class="galeria-item"><img src="https://i.imgur.com/B1H9v0b.jpeg" alt="Detalhe do modelo BT-9000"></div>
+                <div class="galeria-item"><img src="https://i.imgur.com/seNillL.jpeg" alt="Operário utilizando painel da betoneira"></div>
+                <div class="galeria-item"><img src="https://i.imgur.com/gg0xF5R.jpeg" alt="Entrega de betoneira por drone"></div>
+                <div class="galeria-item"><img src="https://i.imgur.com/l7ZfBcu.jpeg" alt="Vista da Obra B com equipamento BetonTech"></div>
+                <div class="galeria-item"><img src="https://i.imgur.com/umkOUgZ.jpeg" alt="Betoneira operando à noite"></div>
+            </div>
+        </section>
+
+         <section id="contato" class="section-padding section-dark fade-on-scroll" role="region" aria-labelledby="contato-titulo">
+            <div class="container">
+                
+                <h2 id="contato-titulo" class="section-title">Faça uma Doação</h2>
+                
+                <p class="section-subtitle">O esquema do Wilton dá prejuízo. Ajude o Marcos Roberto a manter o negócio!</p>
+                
+                
+                <div class="doacao-pix" style="max-width: 400px; margin: 30px auto 0; text-align: center; background: #0c021f; padding: 25px; border-radius: 8px;">
+                    
+                    <h3 style="margin-bottom: 15px; font-family: 'Orbitron', sans-serif;">APOIE COM PIX</h3>
+                    <p>Qualquer valor é bem-vindo para comprar mais betoneiras do Wilton.</p>
+                    
+                    
+                    <p style="margin-top: 20px;">Ou clique para copiar a Chave:</p>
+                    
+                    <div id="pix-key-button" title="Clique para copiar" style="background: #fff; color: #1a1a1a; padding: 12px; border-radius: 5px; font-weight: bold; margin-top: 10px; word-wrap: break-word; user-select: none; cursor: pointer;">
+                        88e45358-ec3f-4f53-acd0-3f80fed766d4
+                    </div>
+
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            
+            <div class="footer-info">
+                <h3 class="logo">MR Betoneiras</h3>
+                <p>Alugando do Wilton, vendendo para você.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/avo_do_marcos_roberto_betoneir" target="_blank" aria-label="Nosso Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/avo_do_marcos_roberto_betoneir" aria-label="Nosso LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/avo_do_marcos_roberto_betoneir" aria-label="Nosso Whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Marcos Roberto Betoneiras. Todos os direitos reservados (e os do Wilton também).</p>
+        </div>
+    </footer>
+
+    <div id="toast-notification" class="toast" role="alert" aria-live="assertive">
+        <p class="toast-message"></p>
+    </div>
+
+    <script>
+        // Espera o documento carregar para adicionar os eventos
+        document.addEventListener('DOMContentLoaded', (event) => {
+            
+            
+            const pixButton = document.getElementById('pix-key-button');
+            const toast = document.getElementById('toast-notification');
+            
+            // Verifica se os elementos existem na página
+            if (pixButton && toast) {
+                const toastMessage = toast.querySelector('.toast-message');
+
+                // adiciona o evento de clique no botão
+                pixButton.addEventListener('click', () => {
+                    
+                    // Pega o texto da chave pix de dentro do botão
+                    // .trim() remove espaços em branco extras
+                    const pixKey = pixButton.innerText.trim(); 
+
+                    // tenta copiar para a área de transferência
+                    navigator.clipboard.writeText(pixKey).then(() => {
+                        
+                        // SUCESSO
+                        toastMessage.innerText = 'Chave Pix copiada com sucesso!';
+                        toast.classList.remove('error'); // Garante que não tem a classe de erro
+                        toast.classList.add('show');
+
+                        // Esconde o toast depois de 3 segundos
+                        setTimeout(() => {
+                            toast.classList.remove('show');
+                        }, 3000);
+
+                    }).catch(err => {
+                        
+                        // ERRO
+                        console.error('Falha ao copiar: ', err);
+                        toastMessage.innerText = 'Erro ao copiar. Tente manualmente.';
+                        toast.classList.add('error'); // Adiciona classe de erro
+                        toast.classList.add('show');
+
+                        //esconde o toast depois de 3 segundos
+                        setTimeout(() => {
+                            toast.classList.remove('show', 'error');
+                        }, 3000);
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
